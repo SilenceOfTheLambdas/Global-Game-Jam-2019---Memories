@@ -20,7 +20,7 @@ public class GlobalControl : MonoBehaviour {
     public bool gameOver;
 
     public bool boardGamePickedUp = false; // Has the board game been picked up?
-    public bool magnifyingGlassPickedUp = false; // Has the magnifying glass been picked up?
+    public bool rosePickedUp = false; // Has the rose been picked up?
     public bool penPickedUp = false; // Has the pen been picked up?
     public bool journalPickedUp = false; // Has the journal been picked up?
     public bool applePickedUp = false; // Has the apple been picked up?
@@ -43,6 +43,11 @@ public class GlobalControl : MonoBehaviour {
         if (boardGamePickedUp)
         {
             Destroy(GameObject.FindWithTag("BoardGame"));
+        }
+
+        if (rosePickedUp)
+        {
+            Destroy((GameObject.FindWithTag("Rose")));
         }
 
         if (penPickedUp)
