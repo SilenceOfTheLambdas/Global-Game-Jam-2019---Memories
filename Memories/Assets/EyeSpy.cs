@@ -22,7 +22,9 @@ public class EyeSpy : MonoBehaviour
             Destroy(item);
             Destroy(ISpyText);
             Destroy(TimerText);
-        }        
+        }     
+        
+        GameObject.FindGameObjectWithTag("Music").GetComponent<GlobalControl>().PlayMusic();
     }
 
     void Update()

@@ -9,6 +9,8 @@ public class GlobalControl : MonoBehaviour {
 
     public static GlobalControl Instance;
 
+    public AudioSource _audioSource;
+
     [Header("The Global Item Score")]
     public int _score; // Stores the global score
 
@@ -30,6 +32,7 @@ public class GlobalControl : MonoBehaviour {
         SetCountText();
         winText.text = "";
     }
+
 
     void SetCountText()
     {
@@ -79,11 +82,26 @@ public class GlobalControl : MonoBehaviour {
         if (Instance == null)
         {
             DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(_audioSource);
             Instance = this;
         }
         else if (Instance != this)
         {
             Destroy(gameObject);
         }
+
+        _audioSource = GetComponent<AudioSource>();
+
+    }
+
+    public void PlayMusic()
+    {
+        if (_audioSource.isPlaying) return;
+        _audioSource.Play();
+    }
+
+    public void StopMusic()
+    {
+        _audioSource.Stop();
     }
 }
