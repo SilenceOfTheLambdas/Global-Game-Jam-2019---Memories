@@ -15,6 +15,8 @@ public class GlobalControl : MonoBehaviour {
     public Text counter; // The counter text
     public Text winText; // The win text
 
+    public bool gameOver;
+
     public bool boardGamePickedUp = false; // Has the board game been picked up?
     public bool magnifyingGlassPickedUp = false; // Has the magnifying glass been picked up?
     public bool penPickedUp = false; // Has the pen been picked up?
@@ -66,10 +68,9 @@ public class GlobalControl : MonoBehaviour {
 
     void onGameOver()
     {
-        if (_score == 1)
+        if (gameOver)
         {
-            counter.text = "";
-            winText.text = "YOU WIN!";
+            SceneManager.LoadScene(0); // TODO: Change to game over menu
         }
     }
 
