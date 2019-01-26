@@ -8513,7 +8513,7 @@ Prefab:
     - target: {fileID: 114516089182586708, guid: 55c15e64cfcbeca47a6bfc995d978d16,
         type: 2}
       propertyPath: newLevel
-      value: Living Room
+      value: Hallway
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55c15e64cfcbeca47a6bfc995d978d16, type: 2}

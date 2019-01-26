@@ -6,9 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: b747cc67bdb21ac4282d246e7cbacd62
+  - enabled: 1
+    path: Assets/Scenes/Hallway.unity
+    guid: 7e4c26cb3d002624596917895290e1bf
+  - enabled: 1
     path: Assets/Scenes/Living Room.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/Kitchen.unity
+    guid: 8c6ec8eb3cf9264469219e1c26482505
+  - enabled: 1
     path: Assets/Scenes/Garden.unity
     guid: 7502e93e67cab53499d7a54849a7ddaf
+  - enabled: 1
+    path: Assets/Scenes/Study.unity
+    guid: 84a76ad2882cb37448a18edc392348d3
+  - enabled: 1
+    path: Assets/Scenes/Bedroom.unity
+    guid: dc67267bc7e379744a3d5157b9a75b1d
   m_configObjects: {}

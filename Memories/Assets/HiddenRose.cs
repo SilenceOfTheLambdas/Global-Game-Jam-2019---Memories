@@ -15,7 +15,7 @@ public class HiddenRose : MonoBehaviour {
 
     void Start()
     {
-        if (GlobalControl.Instance.boardGamePickedUp)
+        if (GlobalControl.Instance.rosePickedUp)
         {
             Destroy(item);
             Destroy(TimerText);
@@ -42,7 +42,6 @@ public class HiddenRose : MonoBehaviour {
     {
         if (other.CompareTag("Player"))
         {
-            Destroy(item);
             Destroy(TimerText);
             GlobalControl.Instance.rosePickedUp = true;
             GlobalControl.Instance._score++;
