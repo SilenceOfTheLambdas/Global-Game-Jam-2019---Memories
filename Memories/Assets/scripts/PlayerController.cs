@@ -41,6 +41,7 @@ public class PlayerController : MonoBehaviour
         Vector2 accleration = GetAccleration(velocityVector);
         Vector3 halfStepVel = new Vector3(velocityVector.x + 0.5f * Time.deltaTime * accleration.x, velocityVector.y + 0.5f * Time.deltaTime * accleration.y, 0);
         transform.position = transform.position + halfStepVel * Time.deltaTime;
+        transform.rotation = Quaternion.Euler(movementVector * Time.deltaTime);
 
         //grab the second half-step
         accleration = GetAccleration(new Vector2(halfStepVel.x, halfStepVel.y));
