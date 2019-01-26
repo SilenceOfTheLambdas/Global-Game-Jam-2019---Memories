@@ -33,7 +33,6 @@ public class GlobalControl : MonoBehaviour {
         winText.text = "";
     }
 
-
     void SetCountText()
     {
         counter.text = "Count: " + _score.ToString();
@@ -79,6 +78,7 @@ public class GlobalControl : MonoBehaviour {
 
     void Awake()
     {
+        _audioSource = GetComponent<AudioSource>();
         if (Instance == null)
         {
             DontDestroyOnLoad(gameObject);
@@ -88,9 +88,8 @@ public class GlobalControl : MonoBehaviour {
         else if (Instance != this)
         {
             Destroy(gameObject);
+            Destroy(_audioSource);
         }
-
-        _audioSource = GetComponent<AudioSource>();
 
     }
 

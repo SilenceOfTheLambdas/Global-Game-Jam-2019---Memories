@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31dc175248010314eae06fcdd6e15e25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accleration: 50
+  accleration: 25
   friction: 10
   mass: 1
   stopVelocity: 0.1
